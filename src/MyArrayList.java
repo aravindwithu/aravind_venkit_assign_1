@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class MyArrayList {
-	private static int[] myArrayList = new int[5];
+	private static int[] myArrayList = new int[50];
 
 	private static void intializeArray(){
 		for(int i=0; i < myArrayList.length; i++){
