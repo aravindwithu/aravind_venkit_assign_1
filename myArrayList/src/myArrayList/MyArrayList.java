@@ -20,19 +20,19 @@ public class MyArrayList{
 		insertSorted(0, newValue);
 	}
 
-	private void insertSorted(int i, int newValue){
+	private void insertSorted(int i, int value){
 		for(i=0; i < myArrayList.length; i++){
 			if(0 == i && -1 == myArrayList[i]){
-				myArrayList[i] = newValue;
+				myArrayList[i] = value;
 				break;
 			}
-			else if(-1 != myArrayList[i] && myArrayList[i]>newValue){
+			else if(-1 != myArrayList[i] && myArrayList[i]>value){
 				int tempValue = myArrayList[i]; 
-				myArrayList[i] = newValue;
+				myArrayList[i] = value;
 				insertSorted(i+1, tempValue);
 			}
 			else if(-1 == myArrayList[i]){
-				myArrayList[i] = newValue;
+				myArrayList[i] = value;
 			}
 		}
 	}
@@ -50,24 +50,56 @@ public class MyArrayList{
 		}
 	}
 
-	public void removeValue(int value){
-
+	/*public void removeValue(int value){
+		for(int i=0; i < myArrayList.length; i++){
+			if(value == myArrayList[i]){
+				myArrayList[i] = -1;
+				removeSorted(i, myArrayList[i+1])
+			}
+		}
 	}
+
+	private void removeSorted(int i, int value){
+
+	}*/
 
 	public int indexOf(int value){
 		for(int i=0; i < myArrayList.length; i++){
-			if(value == myArrayList[i]){
-				return value;
+			if(-1 != myArrayList[i]){
+				if(value == myArrayList[i]){
+					return value;
+				}
+			}
+			else{
+				return -1;
 			}
 		}
-		return -1;
+		return -2;
 	}
 
 	public int size(){
-		return 0;
+		int size = 0;
+		for(int i=0; i < myArrayList.length; i++){
+			if(-1 != myArrayList[i]){
+				size += 1;
+			}
+			else{
+				break;
+			}
+		}
+		return size;
 	}
 
 	public int sum(){
-		return 0;
+		int sum = 0;
+		for(int i=0; i < myArrayList.length; i++){
+			if(-1 != myArrayList[i]){
+				sum += myArrayList[i];
+			}
+			else{
+				break;
+			}
+		}
+		return sum;
 	}
 }
