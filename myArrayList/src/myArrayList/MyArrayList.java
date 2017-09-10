@@ -20,8 +20,8 @@ public class MyArrayList{
 		insertSorted(0, newValue);
 	}
 
-	private void insertSorted(int i, int value){
-		for(i=0; i < myArrayList.length; i++){
+	private void insertSorted(int index, int value){
+		for(int i=index; i < myArrayList.length; i++){
 			if(0 == i && -1 == myArrayList[i]){
 				myArrayList[i] = value;
 				break;
@@ -56,20 +56,25 @@ public class MyArrayList{
 		for(int i=0; i < myArrayList.length; i++){
 			if(value == myArrayList[i]){
 				myArrayList[i] = -1;
-				removeSorted(i, myArrayList[i+1])
+				removeSorted(i, myArrayList[i+1]);
 			}
 		}
 	}
 
 	private void removeSorted(int i, int value){
-
+		for(int i=0; i < myArrayList.length; i++){
+			if(value == myArrayList[i]){
+				myArrayList[i] = -1;
+				removeSorted(i, myArrayList[i+1]);
+			}
+		}
 	}*/
 
 	public int indexOf(int value){
 		for(int i=0; i < myArrayList.length; i++){
 			if(-1 != myArrayList[i]){
 				if(value == myArrayList[i]){
-					return value;
+					return i;
 				}
 			}
 			else{

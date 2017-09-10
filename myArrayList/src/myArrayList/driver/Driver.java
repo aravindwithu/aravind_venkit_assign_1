@@ -50,6 +50,13 @@ public class Driver
 		System.out.println("fifth");
 		myArrayList.insertSorted(10);
 		myArrayList.toString(true);
+
+		System.out.println("size is "+myArrayList.size());
+		System.out.println("sum is "+myArrayList.sum());
+
+		System.out.println("index of 7 is "+myArrayList.indexOf(7));
+
+		System.out.println("index of 10 is "+myArrayList.indexOf(10));
 	}
 	
 }
