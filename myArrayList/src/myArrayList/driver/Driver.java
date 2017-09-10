@@ -51,6 +51,7 @@ public class Driver
 		myArrayList.insertSorted(10);
 		myArrayList.toString(true);
 
+<<<<<<< HEAD
 		System.out.println("sixth");
 		myArrayList.insertSorted(20);
 		myArrayList.toString(true);
@@ -59,12 +60,15 @@ public class Driver
 		myArrayList.insertSorted(1);
 		myArrayList.toString(true);
 
+=======
+>>>>>>> bc57688403c70351305ca08aff062fa157c9828d
 		System.out.println("size is "+myArrayList.size());
 		System.out.println("sum is "+myArrayList.sum());
 
 		System.out.println("index of 7 is "+myArrayList.indexOf(7));
 
 		System.out.println("index of 10 is "+myArrayList.indexOf(10));
+<<<<<<< HEAD
 
 		System.out.println("-----------------remove-------------");
 		System.out.println("remove 3");
@@ -78,6 +82,8 @@ public class Driver
 		System.out.println("remove 2");
 		myArrayList.removeValue(2);
 		myArrayList.toString(true);
+=======
+>>>>>>> bc57688403c70351305ca08aff062fa157c9828d
 	}
 	
 }

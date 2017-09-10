@@ -76,6 +76,7 @@ public class MyArrayList{
 	public void removeValue(int value){
 		for(int i = 0; i < myArrayList.length; i++){
 			if(value == myArrayList[i]){
+<<<<<<< HEAD
 				myArrayList[i] = -1;				
 				for(int j = i; j < myArrayList.length-1; j++){
 					if(-1 != myArrayList[j+1]){
@@ -90,10 +91,26 @@ public class MyArrayList{
 					}	
 				}			
 				break;
+=======
+				myArrayList[i] = -1;
+				removeSorted(i, myArrayList[i+1]);
+>>>>>>> bc57688403c70351305ca08aff062fa157c9828d
 			}
 		}
 	}
 
+<<<<<<< HEAD
+=======
+	private void removeSorted(int i, int value){
+		for(int i=0; i < myArrayList.length; i++){
+			if(value == myArrayList[i]){
+				myArrayList[i] = -1;
+				removeSorted(i, myArrayList[i+1]);
+			}
+		}
+	}*/
+
+>>>>>>> bc57688403c70351305ca08aff062fa157c9828d
 	public int indexOf(int value){
 		for(int i=0; i < myArrayList.length; i++){
 			if(-1 != myArrayList[i]){
