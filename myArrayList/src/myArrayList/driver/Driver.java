@@ -50,6 +50,34 @@ public class Driver
 		System.out.println("fifth");
 		myArrayList.insertSorted(10);
 		myArrayList.toString(true);
+
+		System.out.println("sixth");
+		myArrayList.insertSorted(20);
+		myArrayList.toString(true);
+
+		System.out.println("seventh");
+		myArrayList.insertSorted(1);
+		myArrayList.toString(true);
+
+		System.out.println("size is "+myArrayList.size());
+		System.out.println("sum is "+myArrayList.sum());
+
+		System.out.println("index of 7 is "+myArrayList.indexOf(7));
+
+		System.out.println("index of 10 is "+myArrayList.indexOf(10));
+
+		System.out.println("-----------------remove-------------");
+		System.out.println("remove 3");
+		myArrayList.removeValue(3);
+		myArrayList.toString(true);
+
+		System.out.println("remove 10");
+		myArrayList.removeValue(10);
+		myArrayList.toString(true);
+
+		System.out.println("remove 2");
+		myArrayList.removeValue(2);
+		myArrayList.toString(true);
 	}
 	
 }
