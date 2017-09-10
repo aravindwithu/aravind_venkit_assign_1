@@ -1,4 +1,3 @@
-
 package myArrayList;
 
 import java.io.*;
@@ -38,7 +37,7 @@ public class MyArrayList{
 		}
 	}
 
-	public void displayArray(boolean print){
+	public void toString(boolean print){
 		if(print){
 			for(int i=0; i<myArrayList.length; i++){
 				if(-1 != myArrayList[i]){

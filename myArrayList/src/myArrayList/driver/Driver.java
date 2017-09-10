@@ -31,7 +31,7 @@ public class Driver
 
 		MyArrayList myArrayList = new MyArrayList();
 		myArrayList.insertSorted(5);
-		myArrayList.displayArray(true);
+		myArrayList.toString(true);
 	}
 	
 }
