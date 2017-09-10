@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class MyArrayList{
-	private int[] myArrayList = new int[50];
+	private int[] myArrayList = new int[5];
 
 	public MyArrayList(){
 		intializeArray();
@@ -27,12 +27,14 @@ public class MyArrayList{
 				break;
 			}
 			else if(-1 != myArrayList[i] && myArrayList[i]>value){
-				int tempValue = myArrayList[i]; 
+				int tempValue = myArrayList[i];
 				myArrayList[i] = value;
 				insertSorted(i+1, tempValue);
+				break;
 			}
 			else if(-1 == myArrayList[i]){
 				myArrayList[i] = value;
+				break;
 			}
 		}
 	}
