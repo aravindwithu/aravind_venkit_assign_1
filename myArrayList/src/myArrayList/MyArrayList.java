@@ -49,4 +49,25 @@ public class MyArrayList{
 			}
 		}
 	}
+
+	public void removeValue(int value){
+
+	}
+
+	public int indexOf(int value){
+		for(int i=0; i < myArrayList.length; i++){
+			if(value == myArrayList[i]){
+				return value;
+			}
+		}
+		return -1;
+	}
+
+	public int size(){
+		return 0;
+	}
+
+	public int sum(){
+		return 0;
+	}
 }
