@@ -30,7 +30,25 @@ public class Driver
 	    }
 
 		MyArrayList myArrayList = new MyArrayList();
+
+		System.out.println("first");
 		myArrayList.insertSorted(5);
+		myArrayList.toString(true);
+
+		System.out.println("secound");
+		myArrayList.insertSorted(3);
+		myArrayList.toString(true);
+
+		System.out.println("third");
+		myArrayList.insertSorted(7);
+		myArrayList.toString(true);
+
+		System.out.println("fourth");
+		myArrayList.insertSorted(2);
+		myArrayList.toString(true);
+
+		System.out.println("fifth");
+		myArrayList.insertSorted(10);
 		myArrayList.toString(true);
 	}
 	
