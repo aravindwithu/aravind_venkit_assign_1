@@ -1,6 +1,8 @@
 package myArrayList.driver;
 
 import myArrayList.MyArrayList;
+import myArrayList.util.Results;
+import myArrayList.test.MyArrayListTest;
 
 public class Driver 
 {
@@ -29,53 +31,9 @@ public class Driver
 	    }
 
 		MyArrayList myArrayList = new MyArrayList();
-
-		System.out.println("first");
-		myArrayList.insertSorted(5);
-		myArrayList.toString(true);
-
-		System.out.println("secound");
-		myArrayList.insertSorted(3);
-		myArrayList.toString(true);
-
-		System.out.println("third");
-		myArrayList.insertSorted(7);
-		myArrayList.toString(true);
-
-		System.out.println("fourth");
-		myArrayList.insertSorted(2);
-		myArrayList.toString(true);
-
-		System.out.println("fifth");
-		myArrayList.insertSorted(10);
-		myArrayList.toString(true);
-
-		System.out.println("sixth");
-		myArrayList.insertSorted(20);
-		myArrayList.toString(true);
-
-		System.out.println("seventh");
-		myArrayList.insertSorted(1);
-		myArrayList.toString(true);
-
-		System.out.println("size is "+myArrayList.size());
-		System.out.println("sum is "+myArrayList.sum());
-
-		System.out.println("index of 7 is "+myArrayList.indexOf(7));
-
-		System.out.println("index of 10 is "+myArrayList.indexOf(10));
-
-		System.out.println("-----------------remove-------------");
-		System.out.println("remove 3");
-		myArrayList.removeValue(3);
-		myArrayList.toString(true);
-
-		System.out.println("remove 10");
-		myArrayList.removeValue(10);
-		myArrayList.toString(true);
-
-		System.out.println("remove 2");
-		myArrayList.removeValue(2);
-		myArrayList.toString(true);
+		Results results = new Results();
+		MyArrayListTest myArrayListTest = new MyArrayListTest();
+		myArrayListTest.testMe(myArrayList, results);
+		results.printAll();
 	}
 }
