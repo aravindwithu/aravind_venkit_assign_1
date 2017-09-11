@@ -16,6 +16,8 @@ public class MyArrayListTest{
 		isSorted(myArrayList, results);
 		removeCheck(myArrayList, results);
 		intialBoundaryLimit(myArrayList, results);
+		extendBoundaryCheck(myArrayList, results);
+		extendBoundaryLimit(myArrayList, results);
 	}
 
 	private void insertCheck(MyArrayList myArrayList, Results results){
@@ -105,6 +107,28 @@ public class MyArrayListTest{
 	}
 
 	private void extendBoundaryCheck(MyArrayList myArrayList, Results results){
-		
+		myArrayList.insertSorted(100);
+		if(50 == myArrayList.indexOf(100)){
+			results.storeNewResult(7, "extendBoundaryCheck~passed~extend boundary above 50 is passed");
+		}
+		else{
+			results.storeNewResult(7, "extendBoundaryCheck~failed~extend boundary above 50 is failed");
+		}
+	}
+
+	private void extendBoundaryLimit(MyArrayList myArrayList, Results results){
+		int initialVal = 50;
+		int maxArraySize = 75 - myArrayList.size();
+		for(int i = 0; i < maxArraySize; i++){
+			myArrayList.insertSorted(initialVal);
+			initialVal++;;
+		}
+
+		if(75 == myArrayList.size()){
+			results.storeNewResult(8, "extendBoundaryLimit~passed~extend boundary limit(75) of array is passed");
+		}
+		else{
+			results.storeNewResult(8, "extendBoundaryLimit~failed~extend boundary limit(75) of array is failed");
+		}
 	}
 }
