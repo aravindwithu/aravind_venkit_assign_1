@@ -4,7 +4,6 @@ import myArrayList.MyArrayList;
 
 public class Driver 
 {
-
 	public static void main(String[] args) 
 	{
 	    // command line validation is missing here. FIXME!

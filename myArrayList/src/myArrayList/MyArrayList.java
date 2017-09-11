@@ -1,7 +1,6 @@
 package myArrayList;
 
-import java.io.*;
-import java.util.*;
+import myArrayList.MyArrayList;
 
 public class MyArrayList{
 	private int maxIndex = 50;
