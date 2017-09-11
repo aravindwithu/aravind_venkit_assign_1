@@ -12,6 +12,7 @@ public class Driver
 	    // command line validation is missing here. FIXME!
 	    //try(){
 	    	String pramStr = "", inputFile = "", outputFile = "";
+	    	System.out.println(args.length);
 		    if(0 != args.length){
 		    	if(!args[0].equals("${arg0}")){
 		    		pramStr += args[0] + ", ";
