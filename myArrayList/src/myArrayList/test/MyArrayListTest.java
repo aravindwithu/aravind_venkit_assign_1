@@ -15,7 +15,7 @@ public class MyArrayListTest{
 		indexOfCheck(myArrayList, results); 
 		isSorted(myArrayList, results);
 		removeCheck(myArrayList, results);
-		boundaryCheck(myArrayList, results);
+		intialBoundaryLimit(myArrayList, results);
 	}
 
 	private void insertCheck(MyArrayList myArrayList, Results results){
@@ -84,7 +84,7 @@ public class MyArrayListTest{
 		}
 	}
 
-	private void boundaryCheck(MyArrayList myArrayList, Results results){
+	private void intialBoundaryLimit(MyArrayList myArrayList, Results results){
 		int initialVal = 1;
 		int maxArraySize = 50 - myArrayList.size();
 		for(int i = 0; i < maxArraySize; i++){
@@ -93,10 +93,10 @@ public class MyArrayListTest{
 		}
 
 		if(50 == myArrayList.size()){
-			results.storeNewResult(6, "boundaryCheck~passed~boundaryCheck for intial max index(50) of array passed");
+			results.storeNewResult(6, "intialBoundaryLimit~passed~intial boundary limit(50) of array is passed");
 		}
 		else{
-			results.storeNewResult(6, "boundaryCheck~failed~boundaryCheck for intial max index(50) of array failed");
+			results.storeNewResult(6, "intialBoundaryLimit~failed~intial boundary limit(50) of array is failed");
 		}
 	}
 
