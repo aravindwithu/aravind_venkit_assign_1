@@ -14,6 +14,8 @@ public class MyArrayListTest{
 		sumCheck(myArrayList, results);
 		indexOfCheck(myArrayList, results); 
 		isSorted(myArrayList, results);
+		removeCheck(myArrayList, results);
+		boundaryCheck(myArrayList, results);
 	}
 
 	private void insertCheck(MyArrayList myArrayList, Results results){
@@ -70,9 +72,39 @@ public class MyArrayListTest{
 	}
 
 	private void removeCheck(MyArrayList myArrayList, Results results){
+		myArrayList.removeValue(10);
+		myArrayList.removeValue(5);
+		myArrayList.removeValue(2);
 
+		if(0 == myArrayList.indexOf(3) && 2 == myArrayList.size()){
+			results.storeNewResult(5, "removeCheck~passed~removeValue function passed");
+		}
+		else{
+			results.storeNewResult(5, "removeCheck~failed~removeValue function failed");
+		}
 	}
 
 	private void boundaryCheck(MyArrayList myArrayList, Results results){
+		int initialVal = 1;
+		int maxArraySize = 50 - myArrayList.size();
+		for(int i = 0; i < maxArraySize; i++){
+			myArrayList.insertSorted(initialVal);
+			initialVal++;;
+		}
+
+		if(50 == myArrayList.size()){
+			results.storeNewResult(6, "boundaryCheck~passed~boundaryCheck for intial max index(50) of array passed");
+		}
+		else{
+			results.storeNewResult(6, "boundaryCheck~failed~boundaryCheck for intial max index(50) of array failed");
+		}
+	}
+
+	private void invalidBoundaryCheck(MyArrayList myArrayList, Results results){
+	
+	}
+
+	private void extendBoundaryCheck(MyArrayList myArrayList, Results results){
+		
 	}
 }
