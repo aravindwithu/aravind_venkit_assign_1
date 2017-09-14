@@ -93,7 +93,11 @@ public class Driver
 	    	System.exit(0);
 	    }
 	    finally{
-	    	
+	    	myArrayList = null;
+	    	results = null;
+	    	myArrayListTest = null;
+	    	file = null;
+	    	writer = null;
 	    }
 	}
 }
