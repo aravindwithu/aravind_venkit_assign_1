@@ -1,0 +1,13 @@
+The sum of all the values in the array list is: 21369
+test insertCheck passed
+test sizeCheck passed
+test sumCheck passed
+test indexOfCheck passed
+test isSorted passed
+test removeCheck passed
+test removeInvalidValue passed
+test insertDuplicateValue passed
+test removeOneOfDuplicateValue passed
+test intialBoundaryLimit passed
+test extendBoundaryCheck passed
+test extendBoundaryLimit passed

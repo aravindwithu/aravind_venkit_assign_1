@@ -14,8 +14,9 @@ public class FileProcessor{
 		}
 		catch (Exception ex)
 	  	{
-	    	System.err.format(ex.getMessage());
+	    	System.err.println(ex.getMessage());
 	    	ex.printStackTrace();
+	    	System.exit(0);
 	  	}
 	}
 
@@ -34,8 +35,9 @@ public class FileProcessor{
 		}
 		catch (Exception ex)
 	  	{
-	    	System.err.format(ex.getMessage());
+	    	System.err.println(ex.getMessage());
 	    	ex.printStackTrace();
+	    	System.exit(0);
 	    	return null;
 	  	}
 	}
@@ -47,8 +49,9 @@ public class FileProcessor{
 		}
 		catch (Exception ex)
 	  	{
-	    	System.err.format(ex.getMessage());
+	    	System.err.println(ex.getMessage());
 	    	ex.printStackTrace();
+	    	System.exit(0);
 	  	}
 	}
 }

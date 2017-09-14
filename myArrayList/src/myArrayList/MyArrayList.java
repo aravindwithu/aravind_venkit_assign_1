@@ -32,7 +32,7 @@ public class MyArrayList{
 				myArrayList[i] = value;
 				break;
 			}
-			else if(-1 != myArrayList[i] && myArrayList[i]>value){
+			else if(-1 != myArrayList[i] && myArrayList[i] > value){
 				int tempValue = myArrayList[i];
 				myArrayList[i] = value;
 				insertSorted(i+1, tempValue);

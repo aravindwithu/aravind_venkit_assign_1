@@ -11,12 +11,12 @@ ant -buildfile src/build.xml all
 -----------------------------------------------------------------------
 ## To run by specifying arguments from command line 
 ## We will use this to run your code
-ant -buildfile src/build.xml run -Darg0=FIRST -Darg1=SECOND -Darg2=THIRD
+ant -buildfile src/build.xml run -Darg0=FIRST -Darg1=SECOND
 
 -----------------------------------------------------------------------
 
 ## To create tarball for submission
-ant -buildfile src/build.xml tarzip or tar -zcvf firstName_secondName_assign_number.tar.gz firstName_secondName_assign_number
+ant -buildfile src/build.xml tarzip or tar -zcvf aravind_venkit_assign_1.tar.gz aravind_venkit_assign_1
 
 -----------------------------------------------------------------------
 
@@ -29,12 +29,14 @@ grade of 0 for the involved assignment for my first offense and that I
 will receive a grade of F for the course for any additional
 offense.”
 
-[Date: ]
+[Date: 09/13/2017]
 
 -----------------------------------------------------------------------
 
 Provide justification for Data Structures used in this assignment in
 term of Big O complexity (time and/or space)
+
+
 
 -----------------------------------------------------------------------
 

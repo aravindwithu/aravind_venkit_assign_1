@@ -1,7 +1,10 @@
 package myArrayList.util;
 
-public class Results{
-	private String[] resultArray = new String[10];
+import java.io.PrintWriter;
+
+public class Results implements FileDisplayInterface, StdoutDisplayInterface{
+	private String[] resultArray = new String[12];
+	private PrintWriter writer;
 
 	public Results(){
 		intializeArray();
@@ -19,7 +22,22 @@ public class Results{
 
 	public void printAll(){
 		for(int i = 0; i < resultArray.length; i++){
-			System.out.println(resultArray[i]);
+			writeToStdout(resultArray[i]);
 		}
+	}
+
+	public void writeAll(PrintWriter writer_in){
+		writer = writer_in;
+		for(int i = 0; i < resultArray.length; i++){
+			writeToFile(resultArray[i]);
+		}
+	}
+
+	public void writeToStdout(String s){
+		System.out.println(s);
+	}
+
+	public void writeToFile(String s){
+			writer.println(s);
 	}
 }
