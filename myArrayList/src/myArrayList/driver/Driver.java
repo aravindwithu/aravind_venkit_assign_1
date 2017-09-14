@@ -18,8 +18,19 @@ public class Driver
 {
 	public static void main(String[] args) 
 	{
-	    // command line validation for input file and output file respectively.
+		// Object declared for MyArrayList class.
+	    MyArrayList myArrayList;
+	    // Object declared for Results class.
+	    Results results;
+	    // Object declared for MyArrayListTest class.
+	    MyArrayListTest myArrayListTest;
+	    // Object declared for FileProcessor class.
+	    FileProcessor file;
+	    // Object declared for PrintWriter class.
+	    PrintWriter writer;
+
 	    try{
+	    	// command line validation for input file and output file respectively.
 	    	String inputFile = "", outputFile = "";
 		    if(2 == args.length){// validates given arguments array length to 2.
 		    	if(!args[0].equals("${arg0}")){// validates 1st input file argument value.
@@ -39,23 +50,21 @@ public class Driver
 		    	throw new Exception("Please pass exactly 2 arguments one for input and another for output files.");
 		    }
 
-		    // Object created for MyArrayList class.
-		    MyArrayList myArrayList = new MyArrayList();
-		    // Object created for Results class.
-			Results results = new Results();
-			// Object created for MyArrayListTest class.
-			MyArrayListTest myArrayListTest = new MyArrayListTest();
+		    // Object intialized for MyArrayList class.
+		    myArrayList = new MyArrayList();
+		    // Object intialized for Results class.
+			results = new Results();
+			// Object intialized for MyArrayListTest class.
+			myArrayListTest = new MyArrayListTest();
 			// testMe method from MyArrayListTest cass is called with 2 arguments myArrayList and results objects respectively.
 			// To validate the test cases and to store respective results.
 			myArrayListTest.testMe(myArrayList, results);
-			// Prints all the test results.
-		    results.printAll();
 			// Once test case were validated the myArrayList object is re intialized with new MyArrayList class object.
 			myArrayList = null;
 			myArrayList = new MyArrayList();
 
-			// Object created for FileProcessor with respective input file.
-			FileProcessor file = new FileProcessor(inputFile);
+			// Object intialized for FileProcessor with respective input file.
+			file = new FileProcessor(inputFile);
 			// The input values are read from file and stored in my array list.
 			String line;
 		    while ((line = file.readLine(true)) != null)
@@ -78,8 +87,11 @@ public class Driver
 		    // gets and store the sum of the values in my array in sumValue variable.
 		    int sumValue = myArrayList.sum();
 
-		    // Object for PrintWriter is created with respective output file name and encoding format.
-		   	PrintWriter writer = new PrintWriter(outputFile, "UTF-8");
+		    // Prints all the test results.
+		    results.printAll();
+
+		    // Object for PrintWriter is intialized with respective output file name and encoding format.
+		   	writer = new PrintWriter(outputFile, "UTF-8");
 		   	// Writes the sum value to output file.
 		    writer.println("The sum of all the values in the array list is: " + sumValue);
 		    // writeAll method from Results class is called with writer object to write the test case results to the output file.
@@ -92,7 +104,7 @@ public class Driver
 	    	ex.printStackTrace();// prints stack trace.
 	    	System.exit(0);
 	    }
-	    finally{
+	    finally{// Clears all the objects created.
 	    	myArrayList = null;
 	    	results = null;
 	    	myArrayListTest = null;

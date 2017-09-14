@@ -48,7 +48,7 @@ public class MyArrayList{
 	* Needs 1 arguments 1 -> int newValue.
 	* Sorting is based on insert sort but inserts value in sort order.
 	* i.e. If there is no value in index 0 the value is inserted in index 0 of myArrayList.
-	* If the index is not 0 and the myArrayList value is -1, the the -1 is replaced with new value in myArrayList.
+	* If the index is not 0 and the myArrayList value is -1, then the -1 is replaced with new value in myArrayList.
 	* If there is any other value and if myArrayList value is greater than new value, then the myArrayList value is stored in temp variable and myArrayList value is replaced with new value.
 	* The consecutive values are moved to respective next index.
 	*/
